@@ -1,0 +1,15 @@
+{
+  "functions": {
+    "predeploy": [
+#if eslint#      "npm --prefix \"$RESOURCE_DIR\" run lint",#endif#
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/src/**",
+      "**/test/**"
+    ]
+  }
+}
