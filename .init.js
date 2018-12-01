@@ -1,4 +1,4 @@
-const rimraf = require('rimraf')
+const execSync = require('child_process').execSync
 
 exports.questions = [
 	{
@@ -17,6 +17,6 @@ exports.questions = [
 
 exports.preprocess = function (answer) {
 	if (!answer.eslint) {
-		rimraf.sync('./functions/.eslintrc.json')
+		execSync('rm -rf ./functions/.eslintrc.json')
 	}
 }
