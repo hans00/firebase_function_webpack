@@ -1,4 +1,5 @@
 const rimraf = require('rimraf')
+const fs = require('fs')
 
 exports.questions = [
 	{
@@ -10,6 +11,8 @@ exports.questions = [
 ];
 
 exports.preprocess = function (answer) {
+	console.log(process.pwd())
+	console.log(fs.existsSync('./functions/.eslint.json'))
 	if (!answer.eslint) {
 		rimraf.sync('./functions/.eslint.json')
 	}
