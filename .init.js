@@ -6,6 +6,12 @@ exports.questions = [
 		name: 'eslint',
 		message: 'Enable ESLint?',
 		default: true
+	},
+	{
+		type: 'input',
+		name: 'description',
+		message: 'Description of this project'
+		default: ''
 	}
 ];
 

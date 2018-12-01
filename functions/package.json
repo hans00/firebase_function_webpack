@@ -5,7 +5,7 @@
     "node": "8"
   },
   "scripts": {
-    "lint": "eslint .",
+#if eslint#    "lint": "eslint .",#endif#
     "build": "webpack",
     "predeploy": "npm run build",
     "deploy": "firebase deploy --only functions",
