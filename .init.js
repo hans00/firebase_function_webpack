@@ -10,7 +10,7 @@ exports.questions = [
 	{
 		type: 'input',
 		name: 'description',
-		message: 'Description of this project'
+		message: 'Description of this project',
 		default: ''
 	}
 ];
