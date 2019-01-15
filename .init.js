@@ -16,7 +16,8 @@ exports.questions = [
 ];
 
 exports.preprocess = function (answer) {
+	const rimraf = require('rimraf');
 	if (!answer.eslint) {
-		execSync('rm -rf ./functions/.eslintrc.json')
+		execSync('rm -rf ./functions/.eslintrc.json');
 	}
-}
+};
