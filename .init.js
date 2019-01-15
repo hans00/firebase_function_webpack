@@ -13,9 +13,8 @@ exports.questions = [
 	}
 ];
 
-exports.preprocess = function (answer) {
-	const rimraf = require('rimraf');
+exports.preprocess = function (answer, module) {
 	if (!answer.eslint) {
-		rimraf.sync('./functions/.eslintrc.json');
+		module.rm('./functions/.eslintrc.json');
 	}
 };
